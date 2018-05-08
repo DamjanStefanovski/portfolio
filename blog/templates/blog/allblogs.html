@@ -28,7 +28,7 @@
           <div class="navbar-nav ml-auto">
             <a class="nav-item nav-link" href="#">LinkedIn</a>
             <a class="nav-item nav-link" href="#">Github</a>
-            <a class="nav-item nav-link" href="#">Blog</a>
+            <a class="nav-item nav-link active" href="#">Blog</a>
           </div>
         </div>
       </nav>
@@ -37,36 +37,31 @@
 
     <main role="main">
 
-      <section class="jumbotron text-center">
-        <div class="container">
-          <h1 class="jumbotron-heading">Welcome to mugool.com</h1>
-          <p class="lead text-muted">I'm Damjan Stefanovski tech enthusiast and dedicated scientist.Curious by birth, you can find me here sharing my opinions on topics ranging from music and natural science to trending technologies such as DevOps, Big Data, and  and frameworks like Python's Django and Flask.I works as a freelancer the on small team projects I love to create web apps and tools for data science projects. The modern frameworks can be sturdy and strong with everlasting code, at least until the next big update or a database migration. So the applications that will run in phone or browser environments have to keep up as well. That leads to Agile. From thought to paper/board then skeleton and prototype project. Solo working and constantly learning new languages, frameworks, databases plus storage and deployment. Statically analyzing and generating documentation for the projects that will aid to the continuous integration.</p>
-          <p>
-            <a href="mailto:data.analytics.d3@gmail.com" class="btn btn-info">Email Me</a>
-            <a href="tel:1-571-315-6031" class="btn btn-info ">Call Me: 571 315 6031</a>
-          </p>
-        </div>
-      </section>
+    <div class="container jumbotron-heading">
+      <h1 class="text-center pt-3">Damjan's Blog Page</h1>
+      <br  />
+      <br  />
+      <h2>Recent Posts</h2>
+      <hr />
+      {% for blog in blogs.all %}
 
-      <div class="album py-5 bg-light">
-        <div class="container">
+      <a href="#"><h3>{{ blog.title }}</h3></a>
+      <br />
+      {{ blog.pub_date_pretty }}
+      <br>
+      <img class="img-fluid" src="{{ blog.image.url }}" height=200 width=340/>
+      <br />
+      <p>{{ blog.summary }}</p>
+      {% endfor %}
+    </div>
 
-          <div class="row">
 
-            {% for job in jobs.all %}
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-                <img class="card-img-top" src="{{ job.image.url }}" />
-                <div class="card-body">
-                  <p class="card-text">{{ job.title }}</p>
-                  <p class="card-text">{{ job.summary }}</p>
-                </div>
-              </div>
-            </div>
-            {% endfor %}
-          </div>
-        </div>
-      </div>
+
+
+
+
+
+
 
     </main>
 
