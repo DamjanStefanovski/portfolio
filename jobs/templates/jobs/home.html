@@ -1,13 +1,15 @@
 <!doctype html>
 <html lang="en">
+
   <head>
+    {% load static %}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../../../favicon.ico">
+    <!-- Webiste Icon tag.https://www.w3.org/2005/10/howto-favicon  <link rel="icon" href=""> -->
 
-    <title>Album example for Bootstrap</title>
+    <title>Damjan's Portfolio & Projects Page </title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
@@ -20,15 +22,17 @@
 
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Damjan Stefanovski</a>
+        <a class="navbar-brand" href="{% url 'home' %}">Damjan Stefanovski</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav ml-auto">
-            <a class="nav-item nav-link" href="#">LinkedIn</a>
-            <a class="nav-item nav-link" href="#">Github</a>
-            <a class="nav-item nav-link" href="#">Blog</a>
+            <a class="nav-item nav-link" href="http://www.linkedin.com/in/damjan-stefanovski">LinkedIn</a>
+            <a class="nav-item nav-link" href="https://github.com/DamjanStefanovski">Github</a>
+            <a class="nav-item nav-link" href="{% url 'allblogs' %}">Blog</a>
+            <a class="nav-item nav-link" href="{% static 'Damjan_CV.pdf' %}">Resume</a>
+
           </div>
         </div>
       </nav>
@@ -40,11 +44,12 @@
       <section class="jumbotron text-center">
         <div class="container">
           <h1 class="jumbotron-heading">Welcome to mugool.com</h1>
-          <p class="lead text-muted">I'm Damjan Stefanovski tech enthusiast and dedicated scientist.Curious by birth, you can find me here sharing my opinions on topics ranging from music and natural science to trending technologies such as DevOps, Big Data, and  and frameworks like Python's Django and Flask.I works as a freelancer the on small team projects I love to create web apps and tools for data science projects. The modern frameworks can be sturdy and strong with everlasting code, at least until the next big update or a database migration. So the applications that will run in phone or browser environments have to keep up as well. That leads to Agile. From thought to paper/board then skeleton and prototype project. Solo working and constantly learning new languages, frameworks, databases plus storage and deployment. Statically analyzing and generating documentation for the projects that will aid to the continuous integration.</p>
+          <p class="lead text-muted">I'm Damjan Stefanovski tech enthusiast and dedicated scientist.Curious by birth, you can find me here sharing my opinions on topics ranging from music and natural science to trending technologies such as DevOps, Big Data, Machine Learning and  and frameworks like Python's Django and Flask.I works as a freelancer mostly non profit on small team projects or as an individual full on a to z projects. I enjoy creating web apps and tools for data science projects. The modern frameworks can be sturdy and strong with everlasting code, at least until the next big update or a database migration. So the applications that will run in phone app or browser environments have to keep up as well. That leads to Agile. From thought to paper/board then skeleton and prototype project. Solo working and constantly learning new languages, frameworks, databases plus storage and deployment. Statically analyzing and generating documentation for the projects that will aid to the continuous integration. </p>
           <p>
             <a href="mailto:data.analytics.d3@gmail.com" class="btn btn-info">Email Me</a>
             <a href="tel:1-571-315-6031" class="btn btn-info ">Call Me: 571 315 6031</a>
           </p>
+          <img src="{% static 'IMG-7067.jpg' %}" height=200 />
         </div>
       </section>
 
