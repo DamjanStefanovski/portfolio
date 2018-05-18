@@ -4,7 +4,8 @@ from django.db import models
 class Job(models.Model):
     image = models.ImageField(upload_to='images/',blank=True,null=True)
     title = models.CharField(max_length=200)
-    summary = models.CharField(max_length=200)
+    summary = models.CharField(max_length=600)
+
 
     def __unicode__(self):  #this is a function/method and publish is the name of the method
         self.title
