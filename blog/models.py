@@ -18,7 +18,7 @@ class Blog(models.Model):
         return self.body[:625]
 
     def pub_date_pretty(self):
-        return self.pub_date.strftime('%b %e %Y')
+        return self.pub_date.strftime('%b %e %Y') # the exaxt second in time will not be published in the date and time Fieldself.
 
 
 
